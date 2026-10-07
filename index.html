@@ -18,6 +18,32 @@
 .top nav a.bcnavlink:hover,.top nav a.bcnavlink:focus-visible{background:var(--orange);color:#fff}
 .top nav a.bcnavlink:hover b,.top nav a.bcnavlink:focus-visible b{background:#fff;color:var(--orange)}
 </style>
+<style>
+#contact{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,440px);gap:28px 40px;align-items:start}
+#contact .cleft{display:flex;flex-direction:column;gap:16px;align-items:flex-start;min-width:0}
+.rappel{background:#fff;color:#0B3B36;border-radius:8px;padding:22px 22px 18px;display:flex;flex-direction:column;gap:12px;width:100%}
+.rappel h3{margin:0;font-size:22px;line-height:1.15}
+.rappel p{margin:0}
+.rappel .rintro{font-size:15px;color:#4a5a57}
+.rappel .r2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.rappel label{display:flex;flex-direction:column;gap:4px;font-size:13px;font-weight:600}
+.rappel input,.rappel textarea{font:inherit;font-size:16px;font-weight:400;color:#0B3B36;background:#fff;border:1px solid #b9c4c1;border-radius:4px;padding:9px 10px;width:100%;min-width:0}
+.rappel textarea{resize:vertical}
+.rappel input:focus,.rappel textarea:focus{outline:2px solid var(--orange);outline-offset:1px;border-color:var(--orange)}
+.rappel .bad{border-color:#c0392b;background:#fdf3f1}
+.rappel .rhp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
+.rappel button{font:inherit;font-weight:700;font-size:16px;background:var(--orange);color:#fff;border:0;border-radius:4px;padding:13px 22px;cursor:pointer;align-self:flex-start}
+.rappel button:hover{background:#0B3B36}
+.rappel button[disabled]{opacity:.6;cursor:default}
+.rappel .rmsg{font-size:15px;font-weight:600}
+.rappel .rmsg:empty{display:none}
+.rappel .rmsg.ok{color:#0a7a5f}
+.rappel .rmsg.ko{color:#c0392b}
+.rappel .rnote{font-size:12.5px;color:#4a5a57}
+.rappel .rnote a{color:inherit}
+@media (max-width:860px){#contact{grid-template-columns:1fr}}
+@media (max-width:420px){.rappel .r2{grid-template-columns:1fr}}
+</style>
 </head>
 <body>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&family=Montserrat:ital,wght@0,500;0,700;0,800;1,500;1,700&display=swap">
@@ -393,6 +419,7 @@ a.ep:hover::after,a.ep:focus-visible::after{opacity:1}
   </section>
 
   <section class="contact dark" id="contact">
+    <div class="cleft">
     <p class="big gimbig"><em>On s'occupe de ces sujets,</em> ou on les laisse avec la poussière sous le tapis ?</p>
     <p class="gimhome">Ne rien faire a aussi un coût. Il est juste moins visible.</p>
     <a data-goatcounter-click="clic-rendez-vous" class="cta" href="https://calendly.com/equipe-valayer/reunion-de-decouverte" target="_blank" rel="noopener">Choisir un créneau</a>
@@ -400,6 +427,22 @@ a.ep:hover::after,a.ep:focus-visible::after{opacity:1}
     <div class="mail"><code id="mail">marc.valayer@syzygie.pro</code><button class="copy" id="copy" type="button">Copier l'adresse</button></div>
     <p class="txt">Ou par téléphone : <b class="tel">06 35 32 54 62</b></p>
     <p class="foot">Paris, Normandie, mobile partout en France.</p>
+    </div>
+    <form class="rappel" id="rappel" action="https://formsubmit.co/marc.valayer@syzygie.pro" method="POST" novalidate>
+      <h3>Être rappelé</h3>
+      <p class="rintro">Pas envie de choisir un créneau en ligne ? Laissez vos coordonnées, je vous rappelle.</p>
+      <div class="r2"><label>Nom<input name="Nom" type="text" autocomplete="family-name" required></label><label>Prénom<input name="Prénom" type="text" autocomplete="given-name" required></label></div>
+      <label>Raison sociale<input name="Raison sociale" type="text" autocomplete="organization"></label>
+      <div class="r2"><label>Téléphone<input name="Téléphone" type="tel" autocomplete="tel" inputmode="tel" required></label><label>E-mail<input name="email" type="email" autocomplete="email"></label></div>
+      <label>Cadre de votre demande<textarea name="Cadre de la demande" rows="3"></textarea></label>
+      <input type="text" name="_honey" tabindex="-1" autocomplete="off" class="rhp" aria-hidden="true">
+      <input type="hidden" name="_subject" value="Site Syzygie : demande de rappel">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_captcha" value="false">
+      <button type="submit">Être rappelé</button>
+      <p class="rmsg" id="rmsg" role="status" aria-live="polite"></p>
+      <p class="rnote">Vos coordonnées servent uniquement à vous rappeler. <a href="#mentions">Mentions légales</a></p>
+    </form>
   </section>
   <footer class="hfoot"><a href="business-cases.html">Business cases</a><a href="linkseries.html">Vous connaissez Serge ?</a><a href="#chemins">Chemins de traverse</a><a href="#mentions">Mentions légales</a><a href="#cgv">CGV</a></footer>
 </div>
@@ -507,6 +550,7 @@ a.ep:hover::after,a.ep:focus-visible::after{opacity:1}
       <p>Les prestations sont régies par les <a href="#cgv">conditions générales de vente BtoB</a>, version de janvier 2026.</p>
       <h4>Données personnelles</h4>
       <p>Les données personnelles sont traitées uniquement pour la gestion administrative et contractuelle, l'organisation des prestations et la facturation. Elles ne sont ni vendues ni cédées. Toute demande relative aux droits RGPD doit être adressée à marc.valayer@syzygie.pro.</p>
+      <p>Les informations saisies dans le formulaire « Être rappelé » sont transmises par e-mail à Marc Valayer, par l'intermédiaire du service FormSubmit, dans le seul but de vous recontacter. Elles ne sont utilisées à aucune autre fin.</p>
     </div>
   </section>
 </div>
@@ -591,6 +635,20 @@ if(matchMedia('(hover: none)').matches){document.querySelectorAll('.logowrap').f
 document.querySelectorAll('img.zoom').forEach(im=>{const open=()=>{const d=document.createElement('div');d.className='lbox';const c=new Image();c.src=im.src;c.alt=im.alt;d.appendChild(c);const close=()=>{d.remove();document.removeEventListener('keydown',esc);};const esc=e=>{if(e.key==='Escape')close();};d.onclick=close;document.addEventListener('keydown',esc);document.body.appendChild(d);};im.addEventListener('click',open);im.addEventListener('keydown',e=>{if(e.key==='Enter')open();});});
 </script>
 
+<script>
+(function(){var f=document.getElementById('rappel');if(!f)return;var m=document.getElementById('rmsg'),b=f.querySelector('button');
+f.addEventListener('submit',function(ev){ev.preventDefault();var ok=true;
+ f.querySelectorAll('[required]').forEach(function(i){var v=!!i.value.trim();i.classList.toggle('bad',!v);if(!v)ok=false;});
+ var em=f.querySelector('[name=email]');if(em.value.trim()&&!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(em.value.trim())){em.classList.add('bad');ok=false;}else em.classList.remove('bad');
+ if(!ok){m.className='rmsg ko';m.textContent='Merci de renseigner au moins votre nom, votre prénom et votre téléphone.';return;}
+ var d={};new FormData(f).forEach(function(v,k){d[k]=v;});
+ b.disabled=true;m.className='rmsg';m.textContent='Envoi en cours…';
+ fetch('https://formsubmit.co/ajax/marc.valayer@syzygie.pro',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(d)})
+ .then(function(r){return r.json().then(function(j){if(!r.ok||String(j.success)==='false')throw 0;});})
+ .then(function(){f.reset();m.className='rmsg ok';m.textContent='Merci, c\'est noté : je vous rappelle rapidement.';b.disabled=false;if(window.goatcounter&&goatcounter.count)goatcounter.count({path:'demande-rappel',title:'Demande de rappel',event:true});})
+ .catch(function(){m.className='rmsg ko';m.textContent='L\'envoi n\'a pas abouti. Écrivez-moi à marc.valayer@syzygie.pro ou appelez le 06 35 32 54 62.';b.disabled=false;});
+});})();
+</script>
 <script>
 window.goatcounter={path:function(p){var h=location.hash;return /^#(chemins|mentions|cgv)$/.test(h)?p+h:p}};
 window.addEventListener('hashchange',function(){if(/^#(chemins|mentions|cgv)$/.test(location.hash)&&window.goatcounter&&goatcounter.count)goatcounter.count({path:location.pathname+location.hash})});
