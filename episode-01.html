@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Le lundi matin de Serge — LinkSeries, épisode 1</title>
+<meta name="description" content="Votre réunion du lundi coûte combien ? La réunion d&#x27;équipe : rituel utile ou théâtre hebdomadaire ?">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Le lundi matin de Serge — LinkSeries, épisode 1">
+<meta property="og:description" content="Votre réunion du lundi coûte combien ? La réunion d&#x27;équipe : rituel utile ou théâtre hebdomadaire ?">
+<meta property="og:image" content="https://www.syzygie.pro/ep/01/01.webp">
+<meta property="og:url" content="https://www.syzygie.pro/episode-01.html">
+<link rel="canonical" href="https://www.syzygie.pro/episode-01.html">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&family=Montserrat:ital,wght@0,500;0,700;0,800;1,500;1,700&display=swap">
+<style>html{color-scheme:light}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<link rel="stylesheet" href="site.css">
+</head>
+<body class="v-serie">
+<div class="serie">
+  <div class="brand"><a href="linkseries.html">LinkSeries</a> <a href="index.html">← Syzygie, l'offre</a></div>
+  <a class="back" href="linkseries.html">← Collection complète</a>
+  <h1 class="sh2"><span class="tag">1. Le lundi matin de Serge</span></h1>
+  <div class="cart"><p class="chead">Votre réunion du lundi coûte combien ?</p>
+  <p>Serge s'ennuie. Jean-Kevin se sent humilié. Bernard attend que ça passe.</p>
+  <p>Et Julie croit qu'elle manage.</p>
+  <p>20h d'équipe gaspillées par mois. Zéro partage d'expérience. Zéro effet levier.</p>
+  <p class="cpunch">Réunir n'est pas manager.</p></div>
+  <div class="reader">
+    <img id="slide" src="ep/01/01.webp" alt="Épisode 1, slide 1 sur 9" width="900" height="1125">
+    <div class="ctrl"><button class="nav" id="prev" type="button" aria-label="Slide précédente">←</button><span id="count"></span><button class="nav" id="next" type="button" aria-label="Slide suivante">→</button><button class="nav play" id="play" type="button"></button></div>
+  </div>
+  <article class="analysis"><p class="akick">Le cas, côté métier</p>
+  <h3 class="aq">La réunion d'équipe : rituel utile ou théâtre hebdomadaire ?</h3>
+  <p class="alede">Comment transformer ce moment obligatoire en outil de développement collectif quand chacun fonctionne différemment ?</p>
+  <h4>Le problème et ses coûts</h4>
+  <p>Prenons un cas d'illustration, une PME industrielle de 150 salariés : KPI individuels, process collectifs, motivation, formation — tout dans le même panier, devant tout le monde, chaque semaine.</p>
+  <p>Julie impose des figures obligatoires à tous. Résultat : Serge s'ennuie pendant les métriques de Jean-Kevin, Jean-Kevin se sent humilié par les performances de Serge, Bernard attend que ça passe.</p>
+  <p><strong>Avant intervention :</strong> 40 % de turnover, Serge en roue libre, équipe démotivée.</p>
+  <p><strong>6 mois après :</strong> CA +12 %, zéro départ, Serge devenu mentor.</p>
+  <h4>Les questions qui fâchent</h4>
+  <ul>
+    <li>Combien coûtent vos réunions si personne n'en sort grandi ?</li>
+    <li>Pourquoi réunir tout le monde si chacun repart avec ses propres problèmes ?</li>
+    <li>À quoi sert de mesurer Serge avec les mêmes KPI que Jean-Kevin ?</li>
+  </ul>
+  <h4>Pourquoi c'est explosif</h4>
+  <p>Le problème n'est pas la réunion du lundi. C'est sa non-préparation du vendredi — une routine bienveillante qui provoque l'inertie au lieu de mobiliser.</p>
+  <p class="apull">80 % des réunions du lundi sont des aspirateurs à énergie déguisés en management.</p>
+  <h4>Actions managériales</h4>
+  <ul>
+    <li>Préparer le vendredi pour réussir le lundi</li>
+    <li>Séparer l'individuel du collectif</li>
+    <li>Créer des séquences "figures libres" par profil</li>
+    <li>Faire de chaque réunion un moment d'apprentissage</li>
+    <li>Mesurer l'engagement autant que les résultats</li>
+  </ul>
+  <div class="amine"><b>Mon intervention</b>Restructuration des formats, coaching ciblé par profil, mise en place des séquences. En 48h de diagnostic, vous savez où vous en êtes.</div>
+  <p class="aend">Une question simple : vos réunions rapportent-elles plus qu'elles ne coûtent ?</p>
+  <p class="agim">On s'occupe de ce sujet — ou on le laisse avec la poussière sous le tapis ?</p>
+  <p class="anote">Les situations et les chiffres de cette analyse sont des illustrations, inspirées du terrain.</p>
+  <a data-goatcounter-click="clic-rendez-vous" class="cta" href="https://calendly.com/equipe-valayer/reunion-de-decouverte" target="_blank" rel="noopener">30 minutes pour voir clair</a></article>
+  <nav class="epnav"><a class="back" href="index.html">← Accueil Syzygie</a><a class="back" href="linkseries.html">Collection complète</a><a class="back" id="epnext" href="episode-02.html">Épisode suivant : Formation Day →</a></nav>
+</div>
+<script>
+const TOT=9,EP='01';let cur=0,timer=null;const TEMPO=8000;
+const im=document.getElementById('slide'),playBtn=document.getElementById('play');
+const url=i=>'ep/'+EP+'/'+String(i+1).padStart(2,'0')+'.webp';
+function show(i){cur=i;im.src=url(i);im.alt='Épisode 1, slide '+(i+1)+' sur '+TOT;document.getElementById('count').textContent=(i+1)+' / '+TOT;
+  document.getElementById('prev').disabled=i===0;document.getElementById('next').disabled=i===TOT-1;if(i<TOT-1){const p=new Image();p.src=url(i+1);}}
+function stop(){clearInterval(timer);timer=null;playBtn.textContent='▶ Lecture';playBtn.setAttribute('aria-label','Lancer la lecture automatique');}
+function play(){if(cur>=TOT-1)show(0);clearInterval(timer);timer=setInterval(()=>{if(cur>=TOT-1){stop();return;}show(cur+1);if(cur>=TOT-1)stop();},TEMPO);playBtn.textContent='❚❚ Pause';playBtn.setAttribute('aria-label','Mettre en pause');}
+playBtn.onclick=()=>timer?stop():play();
+document.getElementById('prev').onclick=()=>{stop();show(cur-1);};
+document.getElementById('next').onclick=()=>{stop();show(cur+1);};
+document.addEventListener('keydown',e=>{if(e.key==='ArrowRight'&&cur<TOT-1){stop();show(cur+1);}if(e.key==='ArrowLeft'&&cur>0){stop();show(cur-1);}});
+show(0);stop();
+</script>
+<script data-goatcounter="https://syzygie.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+</body>
+</html>
