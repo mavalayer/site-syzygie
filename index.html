@@ -47,6 +47,15 @@
 <style>
 .sesh{margin:10px 0 -8px;font-size:13px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--orange)}
 </style>
+<style>
+.site .formats{grid-template-columns:repeat(4,minmax(0,1fr))}
+@media (max-width:1000px){.site .formats{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.site .formats{grid-template-columns:1fr}}
+.site .format{padding:20px 16px}
+a.fmlink{text-decoration:none;color:inherit}
+a.fmlink .go{display:block;margin-top:10px;color:var(--orange);font-weight:600;font-size:15px}
+a.fmlink:hover{border-color:var(--orange)}
+</style>
 </head>
 <body>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&family=Montserrat:ital,wght@0,500;0,700;0,800;1,500;1,700&display=swap">
@@ -387,11 +396,12 @@ a.ep:hover::after,a.ep:focus-visible::after{opacity:1}
   </section>
 
   <section class="sec" id="formats">
-    <h2>Trois façons de travailler ensemble</h2>
+    <h2>Quatre façons de travailler ensemble</h2>
     <div class="formats">
       <div class="format"><div class="dur">48 h</div><h3>Diagnostic flash</h3><p>Force de vente, process, outils, management : rapport d'étonnement et plan d'action chiffré.</p></div>
       <div class="format"><div class="dur">3 à 12 mois</div><h3>Management de transition</h3><p>Je prends la direction commerciale le temps de la remettre d'aplomb : redressement, structuration, passation.</p></div>
       <div class="format"><div class="dur">Récurrent</div><h3>Temps partagé</h3><p>Un directeur commercial quelques jours par mois.</p></div>
+      <a class="format fmlink" href="#sessions"><div class="dur">À la carte</div><h3>Interventions sur mesure</h3><p>Des actions conçues avec vous, pour vous, et accompagnées dans la durée.</p><span class="go">Voir des exemples →</span></a>
     </div>
   </section>
 
