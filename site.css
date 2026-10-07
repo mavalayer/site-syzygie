@@ -294,3 +294,16 @@ a.bc .go{margin-top:auto;padding-top:8px;font-weight:600;color:var(--orange)}
 .bcnav{display:flex;flex-wrap:wrap;gap:10px 24px;justify-content:space-between;border-top:1px solid var(--line);padding-top:18px;font-size:15px}
 .bcnav a{color:var(--soft);padding-block:8px;text-decoration:none}
 .bcnav a:hover{color:var(--orange)}
+
+/* sessions */
+.offre .olede{margin:0;font-size:clamp(17px,2vw,20px);line-height:1.5;color:var(--soft);max-width:46em}
+.offre .o2{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
+.obox{background:var(--card);border:1px solid var(--line);border-top:4px solid var(--brand);border-radius:6px;padding:20px 22px}
+.obox.mint{border-top-color:var(--orange)}
+.obox h2,.offre .oh{margin:0 0 10px;font-size:21px;line-height:1.2}
+.offre .oh{margin:14px 0 0;font-size:clamp(22px,3vw,28px)}
+.obox ul{margin:0;padding-left:18px;font-size:16px;color:var(--soft)}
+.obox li{margin-block:8px}
+.offre .otxt{margin:0;max-width:46em;color:var(--soft)}
+.offre .onext{margin:0;padding-left:20px;max-width:46em;color:var(--soft)}
+.offre .onext li{margin-block:6px}
